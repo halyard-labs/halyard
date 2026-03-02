@@ -1,24 +1,4 @@
 {
-  "hooks": {
-    "Stop": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "pnpm lint",
-            "timeout": 60,
-            "statusMessage": "Running lint..."
-          },
-          {
-            "type": "command",
-            "command": "pnpm typecheck",
-            "timeout": 60,
-            "statusMessage": "Running typecheck..."
-          }
-        ]
-      }
-    ]
-  },
   "permissions": {
     "allow": [
       "Grep",
@@ -46,18 +26,48 @@
       "Skill(*)"
     ],
     "deny": [],
-    "ask": ["Bash(rm:*)"]
+    "ask": [
+      "Bash(rm:*)"
+    ]
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "pnpm lint",
+            "timeout": 60,
+            "statusMessage": "Running lint..."
+          },
+          {
+            "type": "command",
+            "command": "pnpm typecheck",
+            "timeout": 60,
+            "statusMessage": "Running typecheck..."
+          }
+        ]
+      }
+    ]
   },
   "enabledPlugins": {
     "code-simplifier@claude-plugins-official": true,
     "commit-commands@claude-plugins-official": true,
-    "typescript-lsp@claude-plugins-official": true
+    "typescript-lsp@claude-plugins-official": true,
+    "ask-expert@ask-expert-marketplace": true,
+    "ask-expert@halyard-labs": true
   },
   "extraKnownMarketplaces": {
     "claude-plugins-official": {
       "source": {
         "source": "github",
         "repo": "anthropics/claude-plugins-official"
+      }
+    },
+    "ask-expert-marketplace": {
+      "source": {
+        "source": "github",
+        "repo": "halyard-labs/claude-plugin-marketplace"
       }
     }
   }
