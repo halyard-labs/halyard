@@ -55,7 +55,7 @@
     "commit-commands@claude-plugins-official": true,
     "typescript-lsp@claude-plugins-official": true,
     "ask-expert@ask-expert-marketplace": true,
-    "ask-expert@halyard-labs": true
+    "halyard@halyard-labs": true
   },
   "extraKnownMarketplaces": {
     "claude-plugins-official": {
